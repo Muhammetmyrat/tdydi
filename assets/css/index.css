@@ -365,6 +365,12 @@ body {
 body._lock {
   overflow: hidden;
 }
+.__container {
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -379,25 +385,11 @@ body._lock {
   background-color: rgb(233, 233, 240);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   letter-spacing: 0.1ch;
   cursor: pointer;
   margin-left: auto;
   width: 100%;
-}
-.header-top__infos span:not(:first-child) {
-  padding-right: 10px;
-  padding-left: 5px;
-  border-right: 2px solid var(--text);
-}
-.header-top__infos span:first-child {
-  padding-right: 10px;
-  padding-left: 5px;
-}
-.header-top__infos span {
-  border-right: 2px solid var(--text);
-}
-.header-top__infos:not(::last-child) {
 }
 .header-top__langs {
   display: flex;
@@ -445,6 +437,9 @@ body._lock {
 }
 .header-middle__menus {
   display: flex;
+  padding-bottom: 10px;
+}
+.header-middle__menu a {
   color: #fff;
   font-size: 18px;
   letter-spacing: 0.1ch;
@@ -464,8 +459,8 @@ body._lock {
   font-weight: 900;
   cursor: pointer;
 }
-.header-middle__right input {
-  width: 330px;
+.header-middle__right {
+  width: 400px;
   height: 40px;
   border-radius: 5px;
   padding: 0 8px;
@@ -1760,6 +1755,140 @@ body._lock {
   background-color: transparent !important;
   color: var(--secondary) !important;
 }
+.contact-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+.contact-jpg {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  margin-bottom: auto;
+  border-radius: 25%;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: green;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.contact {
+  border-radius: 5px;
+  padding: 20px;
+  width: 45%;
+  margin: 0;
+  display: flex;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+  padding-bottom: 40px;
+}
+
+.left__info {
+  width: 70%;
+}
+.left__btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.left__btn button {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: green;
+  color: #ffffff;
+}
+.left__button {
+  margin-bottom: 34px;
+  border-radius: 4px;
+}
+.left__button button {
+  color: green;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: capitalize;
+  padding: 10px;
+  border-radius: 4px;
+}
+.left__button button:hover {
+  background-color: rgba(196, 225, 241, 0.8);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.left__button button.active {
+  color: #ffffff;
+  background: green;
+}
+.left__button button:not(:last-child) {
+  margin-right: 30px;
+}
+.left__row {
+  display: flex;
+  margin-bottom: 20px;
+}
+.left__img {
+  margin-right: 20px;
+}
+.left__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.left__title {
+  font-weight: 600;
+  color: green;
+  margin-bottom: 16px;
+}
+.left__subtitle {
+  font-weight: 400;
+  font-style: normal;
+}
+.footer {
+  background-color: green;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 .footer > a {
   width: 54px;
   height: 54px;
@@ -1791,14 +1920,6 @@ body._lock {
     height: 24px;
   }
 }
-.footer {
-  background-color: green;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 70px;
-}
 @media (max-width: 1400px) {
   .footer {
     padding-top: calc(10px + 60 * ((100vw - 320px) / 1080));
@@ -1808,6 +1929,20 @@ body._lock {
   .footer {
     padding-bottom: calc(10px + 20 * ((100vw - 320px) / 1080));
   }
+}
+.footer-top__infos span {
+  font-weight: 500;
+  line-height: 130%;
+  text-align: center;
+  color: var(--white);
+}
+.footer-top__infos span:not(:first-child) {
+  padding-right: 10px;
+  padding-left: 5px;
+}
+.footer-top__infos span:first-child {
+  padding-right: 10px;
+  padding-left: 5px;
 }
 .footer__item {
   display: flex;
@@ -1833,10 +1968,10 @@ body._lock {
     padding-top: calc(12px + 18 * ((100vw - 320px) / 1080));
   }
 }
-.footer-infos{
-align-items: center;
-display: flex;
-justify-content: center;
-padding: 15px;
-border: '1px solid black'
+.footer-infos {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  border: "1px solid black";
 }

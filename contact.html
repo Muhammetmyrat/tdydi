@@ -3,238 +3,240 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TDYDI | Baş sahypa</title>
+    <title>TDYDI | Habarlaşmak</title>
     <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <link rel="stylesheet" href="./assets/css/contact.css" />
   </head>
   <body>
     <div id="app">
       <header>
-        <div class="header">
-          <div class="header-top">
-            <div class="header-top__langs">
-              <div class="header-top__lang">
-                <div class="header-top__lang-img">
-                  <img src="./assets/img/Flag_of_Turkmenistan.png" alt="" />
-                </div>
-                <div class="header-top__lang-text">TK</div>
-              </div>
-              <div class="header-top__lang">
-                <div class="header-top__lang-img">
-                  <img src="./assets/img/Flag_of_Russia.png" alt="" />
-                </div>
-                <div class="header-top__lang-text">RU</div>
-              </div>
-              <div class="header-top__lang">
-                <div class="header-top__lang-img">
-                  <img
-                    src="./assets/img/istockphoto-486407806-612x612.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="header-top__lang-text">EN</div>
-              </div>
-            </div>
-          </div>
-          <div class="header-middle">
-            <div class="header-middle__left">
-              <div class="header-middle__logo">
-                <img src="./assets/img/logo.gif" alt="" />
-              </div>
-              <div class="header-middle__titles">
-                <div class="header-middle__menus">
-                  <div class="header-middle__menu"><span>Baş sahypa</span></div>
-                  <div class="header-middle__menu"><span>Biz barada</span></div>
-                  <div class="header-middle__menu">
-                    <span>Habarlaşmak</span>
-                  </div>
-                  <div class="header-middle__menu"><span>Çäreler</span></div>
-                </div>
-                <div class="header-middle__title">
-                  <span
-                    >Türkmen döwlet ykdysadyýet we dolandyryş instituty</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="header-middle__right">
-              <input type="text" placeholder="Gözleg" />
-            </div>
-          </div>
-          <div class="header-bottom">
-            <div class="menu__body">
-              <div class="menu__wrapper">
-                <ul class="menu__list">
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Institut barada</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Dalaşgärler</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Talyplar</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Magistirlar</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Aspirantlar</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Işgärler</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Uçurumlar</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Online sapaklar</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Özüňi syna</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+			<div class="header">
+			  <div class="header-top">
+				 <div class="header-top__langs">
+					<div class="header-top__lang">
+					  <div class="header-top__lang-img">
+						 <img src="./assets/img/Flag_of_Turkmenistan.png" alt="" />
+					  </div>
+					  <div class="header-top__lang-text">TK</div>
+					</div>
+					<div class="header-top__lang">
+					  <div class="header-top__lang-img">
+						 <img src="./assets/img/Flag_of_Russia.png" alt="" />
+					  </div>
+					  <div class="header-top__lang-text">RU</div>
+					</div>
+					<div class="header-top__lang">
+					  <div class="header-top__lang-img">
+						 <img
+							src="./assets/img/istockphoto-486407806-612x612.jpg"
+							alt=""
+						 />
+					  </div>
+					  <div class="header-top__lang-text">EN</div>
+					</div>
+				 </div>
+			  </div>
+			  <div class="header-middle">
+				 <div class="header-middle__left">
+					<div class="header-middle__logo">
+					  <img src="./assets/img/logo.gif" alt="" />
+					</div>
+					<div class="header-middle__titles">
+					  <div class="header-middle__menus">
+						 <div class="header-middle__menu">
+							<span><a href="./index.html">Baş sahypa</a></span>
+						 </div>
+						 <div class="header-middle__menu">
+							<span><a href="#">Biz barada</a></span>
+						 </div>
+						 <div class="header-middle__menu">
+							<span><a href="./contact.html">Habarlaşmak </a></span>
+						 </div>
+						 <div class="header-middle__menu">
+							<span><a href="#">Çäreler</a></span>
+						 </div>
+					  </div>
+					  <div class="header-middle__title">
+						 <span
+							>Türkmen döwlet ykdysadyýet we dolandyryş instituty</span
+						 >
+					  </div>
+					</div>
+				 </div>
+				 <div class="header-middle__right">
+					<input type="text" placeholder="Gözleg" />
+				 </div>
+			  </div>
+			  <div class="header-bottom">
+				 <div class="menu__body">
+					<div class="menu__wrapper">
+					  <ul class="menu__list">
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Institut barada</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Dalaşgärler</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Talyplar</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Magistirlar</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Aspirantlar</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Işgärler</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Uçurumlar</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Online sapaklar</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Özüňi syna</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+					  </ul>
+					</div>
+				 </div>
+			  </div>
+			</div>
+		 </header>
  
-      <!-- CONTACT  -->
-
-      <div contact-main>
+      <div class="contact-main">
         <div class="contact-jpg">
             <img src="./assets/img/contactus.jpg" alt="" height="500" width="500">
            </div>
       <div class="contact">
-        <form action="action_page.php">
-
+        <form action="#">
             <label for="fname">Ady</label>
             <input type="text" id="fname" name="firstname" placeholder="Ady">
         
@@ -253,33 +255,31 @@
           </form>
       </div>
     </div>
-
-
-
-      <div class="footer-infos">
-        <div class="header-top__infos">
-           <span class="header-top_info">
-             <img  src="./assets/img/place.svg" />
-             Salgysy: 744000, Türkmenistan Aşgabat, 1972 (Atatürk) köçesi,
-             73</span
-           >
-           <span class="header-top_info"> <img src="./assets/img/call.svg" /> Telefon: (+993 12) 48-62-31</span
-           ><span class="header-top_info">Faks: (+993 12) 48-62-04</span
-           ><span class="header-top_info"> <img src="./assets/img/email.svg" /> Email: tsiem@online.tm</span>
-         </div> 
-     </div>
    </main>
-   <footer class="footer">
-     <a href="#main" class="footer__top-button"
-       ><img src="./assets/img/top-button.svg" alt=""
-     /></a>
-     <div class="footer__bottom">
-       <div class="footer__bottom-text __container">
-         Ähli hukuklar goralan © 2022 - Türkmen döwlet ykdysadyýet we
-         dolandyryş instituty
-       </div>
-     </div>
-   </footer>
+	<footer class="footer">
+		<div class="footer-infos">
+		  <div class="footer-top__infos">
+			 <span class="footer-top_info">
+				<img src="./assets/img/place.svg" />
+				Salgysy: 744000, Türkmenistan Aşgabat, 1972 (Atatürk) köçesi,
+				73</span
+			 >
+			 <span class="footer-top_info">
+				<img src="./assets/img/call.svg" /> Telefon: (+993 12)
+				48-62-31</span
+			 ><span class="footer-top_info">Faks: (+993 12) 48-62-04</span
+			 ><span class="footer-top_info">
+				<img src="./assets/img/email.svg" /> Email: tsiem@online.tm</span
+			 >
+		  </div>
+		</div>
+		<div class="footer__bottom">
+		  <div class="footer__bottom-text __container">
+			 Ähli hukuklar goralan © 2022 - Türkmen döwlet ykdysadyýet we
+			 dolandyryş instituty
+		  </div>
+		</div>
+	 </footer>
  </div>
  <script src="./assets/js/vue.js"></script>
  <script src="./assets/js/swiper-bundle.min.js"></script>
