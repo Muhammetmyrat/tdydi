@@ -382,6 +382,8 @@ body._lock {
   justify-content: space-between;
   letter-spacing: 0.1ch;
   cursor: pointer;
+  margin-left: auto;
+  width: 100%;
 }
 .header-top__infos span:not(:first-child) {
   padding-right: 10px;
@@ -399,6 +401,7 @@ body._lock {
 }
 .header-top__langs {
   display: flex;
+  float: left;
 }
 .header-top__lang {
   display: flex;
@@ -1829,4 +1832,11 @@ body._lock {
   .footer__bottom-text {
     padding-top: calc(12px + 18 * ((100vw - 320px) / 1080));
   }
+}
+.footer-infos{
+align-items: center;
+display: flex;
+justify-content: center;
+padding: 15px;
+border: '1px solid black'
 }
