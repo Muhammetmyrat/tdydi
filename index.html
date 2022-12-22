@@ -433,7 +433,73 @@
             </div>
           </div>
         </section>
-        <section id="about" class="about-us __container" ref="observe">
+        <section
+          id="about"
+          :class="['about-us __container', {active: isActive === true}]"
+          ref="observe"
+        >
+          <div class="about-us__pop-up pop-up-about-us">
+            <div class="pop-up-about-us__container __container">
+              <div class="pop-up-about-us__close-icon" @click="togglePopUp">
+                <img src="./assets/img/close.svg" />
+              </div>
+              <div class="pop-up-about-us__body">
+                <div class="pop-up-about-us__top">
+                  <div class="pop-up-about-us__left">
+                    <div class="pop-up-about-us__img">
+                      <img src="./assets/img/tdydi-banner1.jpg" />
+                    </div>
+                  </div>
+                  <div class="pop-up-about-us__right">
+                    <div class="pop-up-about-us__text">
+                      <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.
+                        It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem Ipsum passages, and
+                        more recently with desktop publishing software like
+                        Aldus PageMaker including versions of Lorem Ipsum is
+                        simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard
+                        dummy text ever since the 1500s, when an unknown
+                        printer. Lorem Ipsum is simply dummy text of the
+                        printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and
+                        scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged.
+                        It was popularised in the 1960s with the release of
+                        Letraset sheets containing Lorem Ipsum passages, and
+                        more recently with desktop publishing software like
+                        Aldus PageMaker including versions of Lorem Ipsum is
+                        simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard
+                        dummy text ever since the 1500s, when an unknown
+                        printer.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="pop-up-about-us__footer">
+                    <div class="pop-up-about-us__item">
+                      <img src="./assets/img/tdydi-banner2.jpg" />
+                    </div>
+                    <div class="pop-up-about-us__item">
+                      <img src="./assets/img/tdydi-banner3.jpg" />
+                    </div>
+                    <div class="pop-up-about-us__item">
+                      <img src="./assets/img/tdydi-banner4.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="about-us__title-box">
             <div class="about-us__title title">Esasy görkezijiler</div>
             <div class="animation">
@@ -507,13 +573,11 @@
                     <div class="news-by-category__items">
                       <div class="news-by-category__news">
                         <div class="news-by-category__img">
-                          <a href="./news.html">
-                            <div class="img-box photo_bg_color">
-                              <div class="img-container">
-                                <img src="./assets/img/ARS_1.jpg" alt="" />
-                              </div>
+                          <div class="img-box photo_bg_color">
+                            <div class="img-container">
+                              <img src="./assets/img/ARS_1.jpg" alt="" />
                             </div>
-                          </a>
+                          </div>
                         </div>
                         <div class="news-by-category__content">
                           <time class="main-news-item__date"> 10.03.2002 </time>
@@ -527,6 +591,12 @@
                             quae nostrum architecto corrupti eaque debitis.
                             Similique nam distinctio ab.
                           </div>
+                          <div
+                            class="about-us__content-button"
+                            @click="togglePopUp"
+                          >
+                            <span>DOLY OKA</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -537,13 +607,11 @@
                     <div class="news-by-category__items">
                       <div class="news-by-category__news">
                         <div class="news-by-category__img">
-                          <a href="./news.html">
-                            <div class="img-box photo_bg_color">
-                              <div class="img-container">
-                                <img src="./assets/img/ARS_4.jpg" alt="" />
-                              </div>
+                          <div class="img-box photo_bg_color">
+                            <div class="img-container">
+                              <img src="./assets/img/ARS_4.jpg" alt="" />
                             </div>
-                          </a>
+                          </div>
                         </div>
                         <div class="news-by-category__content">
                           <time class="main-news-item__date"> 10.03.2002 </time>
@@ -557,6 +625,12 @@
                             quae nostrum architecto corrupti eaque debitis.
                             Similique nam distinctio ab.
                           </div>
+                          <div
+                            class="about-us__content-button"
+                            @click="togglePopUp"
+                          >
+                            <span>DOLY OKA</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -567,13 +641,11 @@
                     <div class="news-by-category__items">
                       <div class="news-by-category__news">
                         <div class="news-by-category__img">
-                          <a href="./news.html">
-                            <div class="img-box photo_bg_color">
-                              <div class="img-container">
-                                <img src="./assets/img/ARS_3.jpg" alt="" />
-                              </div>
+                          <div class="img-box photo_bg_color">
+                            <div class="img-container">
+                              <img src="./assets/img/ARS_3.jpg" alt="" />
                             </div>
-                          </a>
+                          </div>
                         </div>
                         <div class="news-by-category__content">
                           <time class="main-news-item__date"> 10.03.2002 </time>
@@ -587,6 +659,12 @@
                             quae nostrum architecto corrupti eaque debitis.
                             Similique nam distinctio ab.
                           </div>
+                          <div
+                            class="about-us__content-button"
+                            @click="togglePopUp"
+                          >
+                            <span>DOLY OKA</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -597,13 +675,11 @@
                     <div class="news-by-category__items">
                       <div class="news-by-category__news">
                         <div class="news-by-category__img">
-                          <a href="./news.html">
-                            <div class="img-box photo_bg_color">
-                              <div class="img-container">
-                                <img src="./assets/img/ARS_2.jpg" alt="" />
-                              </div>
+                          <div class="img-box photo_bg_color">
+                            <div class="img-container">
+                              <img src="./assets/img/ARS_2.jpg" alt="" />
                             </div>
-                          </a>
+                          </div>
                         </div>
                         <div class="news-by-category__content">
                           <time class="main-news-item__date"> 10.03.2002 </time>
@@ -617,6 +693,12 @@
                             quae nostrum architecto corrupti eaque debitis.
                             Similique nam distinctio ab.
                           </div>
+                          <div
+                            class="about-us__content-button"
+                            @click="togglePopUp"
+                          >
+                            <span>DOLY OKA</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -627,13 +709,11 @@
                     <div class="news-by-category__items">
                       <div class="news-by-category__news">
                         <div class="news-by-category__img">
-                          <a href="./news.html">
-                            <div class="img-box photo_bg_color">
-                              <div class="img-container">
-                                <img src="./assets/img/surat1.jpg" alt="" />
-                              </div>
+                          <div class="img-box photo_bg_color">
+                            <div class="img-container">
+                              <img src="./assets/img/surat1.jpg" alt="" />
                             </div>
-                          </a>
+                          </div>
                         </div>
                         <div class="news-by-category__content">
                           <time class="main-news-item__date"> 10.03.2002 </time>
@@ -647,6 +727,12 @@
                             quae nostrum architecto corrupti eaque debitis.
                             Similique nam distinctio ab.
                           </div>
+                          <div
+                            class="about-us__content-button"
+                            @click="togglePopUp"
+                          >
+                            <span>DOLY OKA</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -657,13 +743,11 @@
                     <div class="news-by-category__items">
                       <div class="news-by-category__news">
                         <div class="news-by-category__img">
-                          <a href="./news.html">
-                            <div class="img-box photo_bg_color">
-                              <div class="img-container">
-                                <img src="./assets/img/tazelik.jpg" alt="" />
-                              </div>
+                          <div class="img-box photo_bg_color">
+                            <div class="img-container">
+                              <img src="./assets/img/tazelik.jpg" alt="" />
                             </div>
-                          </a>
+                          </div>
                         </div>
                         <div class="news-by-category__content">
                           <time class="main-news-item__date"> 10.03.2002 </time>
@@ -676,6 +760,12 @@
                             odio voluptates vitae dicta voluptate ab, soluta
                             quae nostrum architecto corrupti eaque debitis.
                             Similique nam distinctio ab.
+                          </div>
+                          <div
+                            class="about-us__content-button"
+                            @click="togglePopUp"
+                          >
+                            <span>DOLY OKA</span>
                           </div>
                         </div>
                       </div>

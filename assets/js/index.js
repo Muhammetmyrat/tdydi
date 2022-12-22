@@ -26,6 +26,7 @@ createApp({
         { title: "Soraglar we jogaplar" },
       ],
       observer: null,
+      isActive: false,
       paginationClasses: {
         ...defaultClasses,
       },
@@ -158,6 +159,19 @@ createApp({
     if (this.modelValue > this.pageCount) {
       //   this.$emit("input", this.pageCount);
     }
+    let className = "scroll";
+    let scrollTrigger = 100;
+
+    window.onscroll = function (e) {
+      if (
+        window.scrollY >= scrollTrigger ||
+        window.pageYOffset >= scrollTrigger
+      ) {
+        document.querySelector(".header").classList.add(className);
+      } else {
+        document.querySelector(".header").classList.remove(className);
+      }
+    };
   },
   destroyed() {
     this.observer.disconnect();
@@ -197,20 +211,14 @@ createApp({
         counter.innerText = Number(0);
         update();
       });
-      //--------------------------------------------------------SCROLL COLOR--------------------------------------
-      let className = "scroll";
-      let scrollTrigger = 100;
-
-      window.onscroll = function (e) {
-        if (
-          window.scrollY >= scrollTrigger ||
-          window.pageYOffset >= scrollTrigger
-        ) {
-          document.querySelector(".header").classList.add(className);
-        } else {
-          document.querySelector(".header").classList.remove(className);
-        }
-      };
+    },
+    togglePopUp() {
+      this.isActive = !this.isActive;
+      if (this.isActive) {
+        document.body.classList.add("_lock");
+      } else {
+        document.body.classList.remove("_lock");
+      }
     },
   },
 }).mount("#app");
