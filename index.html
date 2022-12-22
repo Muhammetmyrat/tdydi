@@ -12,6 +12,15 @@
       <header>
         <div class="header">
           <div class="header-top">
+            <div class="header-top__infos">
+              <span class="header-top_info"
+                >Salgysy: 744000, Türkmenistan Aşgabat, 1972 (Atatürk) köçesi,
+                73</span
+              >
+              <span class="header-top_info">Telefon: (+993 12) 48-62-31</span
+              ><span class="header-top_info">Faks: (+993 12) 48-62-04</span
+              ><span class="header-top_info">Email: tsiem@online.tm</span>
+            </div>
             <div class="header-top__langs">
               <div class="header-top__lang">
                 <div class="header-top__lang-img">
@@ -424,6 +433,71 @@
             </div>
           </div>
         </section>
+        <section id="about" class="about-us __container" ref="observe">
+          <div class="about-us__title-box">
+            <div class="about-us__title title">Esasy görkezijiler</div>
+            <div class="animation">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="about-us__box">
+            <div class="about-us__slider">
+              <div class="about-us__swiper swiper">
+                <div class="about-us__swiper-wrapper swiper-wrapper">
+                  <div class="about-us__swiper-slide swiper-slide">
+                    <div class="about-us__swiper-statistics">
+                      <div class="about-us__swiper-statistic">
+                        <span class="about-us__swiper-count" data-target="265"
+                          >265</span
+                        >
+                        <span class="about-us__swiper-name">Mugallymlar</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="about-us__swiper-slide swiper-slide">
+                    <div class="about-us__swiper-statistics">
+                      <div class="about-us__swiper-statistic">
+                        <span class="about-us__swiper-count" data-target="98"
+                          >98</span
+                        >
+                        <span class="about-us__swiper-name">Magistrantlar</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="about-us__swiper-slide swiper-slide">
+                    <div class="about-us__swiper-statistics">
+                      <div class="about-us__swiper-statistic">
+                        <span class="about-us__swiper-count" data-target="3759"
+                          >3759</span
+                        >
+                        <span class="about-us__swiper-name">Talyplar</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="about-us__swiper-slide swiper-slide">
+                    <div class="about-us__swiper-statistics">
+                      <div class="about-us__swiper-statistic">
+                        <span class="about-us__swiper-count" data-target="35"
+                          >35</span
+                        >
+                        <span class="about-us__swiper-name">Ugurlar</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-us__buttons">
+                  <div class="about-us__button-prev swiper-button-prev">
+                    <img src="./assets/img/left.svg" alt="" />
+                  </div>
+                  <div class="about-us__button-next swiper-button-next">
+                    <img src="./assets/img/left.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section>
           <div class="news-by-categorys">
             <div class="news-by-categorys__container">
@@ -610,6 +684,55 @@
                 </div>
               </div>
             </div>
+            <ul :class="paginationClasses.ul">
+              <li
+                v-if="paginationLabels.prev"
+                :class="`${paginationClasses.li} ${hasFirst ? paginationClasses.liDisable : ''}`"
+              >
+                <!-- <button
+                  @click="prev"
+                  :disabled="hasFirst"
+                  :class="`${paginationClasses.button} ${hasFirst ? paginationClasses.buttonDisable : ''}`"
+                >
+                  <s-icon icon="chevron-left" />
+                </button> -->
+              </li>
+
+              <li
+                v-for="page in datas"
+                :key="page.label"
+                :class="`${paginationClasses.li} ${page.active ? paginationClasses.liActive : ''} ${
+						 page.disable ? paginationClasses.liDisable : ''
+					  }`"
+              >
+                <span
+                  v-if="page.disable"
+                  :class="`${paginationClasses.button} ${paginationClasses.buttonDisable}`"
+                >
+                  ...
+                </span>
+                <button
+                  v-else
+                  @click="goto(page.label)"
+                  :class="`${paginationClasses.button} ${page.active ? paginationClasses.buttonActive : ''}`"
+                >
+                  {{ page.label }}
+                </button>
+              </li>
+
+              <li
+                v-if="paginationLabels.next"
+                :class="`${paginationClasses.li} ${hasLast ? paginationClasses.liDisable : ''}`"
+              >
+                <!-- <button
+                  @click="next"
+                  :disabled="hasLast"
+                  :class="`${paginationClasses.button} ${hasLast ? paginationClasses.buttonDisable : ''}`"
+                >
+					 <s-icon icon="chevron-left" />
+                </button> -->
+              </li>
+            </ul>
           </div>
         </section>
         <section id="partner" class="partners __container">
@@ -650,10 +773,16 @@
         </section>
       </main>
       <footer class="footer">
-    <div class="footer-text">
-        <div class="container"><p class="text-center" id="yui_3_17_2_1_1671445746687_24">Copyright © 2022 - Türkmen döwlet ykdysadyýet we dolandyryş instituty</p></div>
-    </div>
-    </footer>
+        <a href="#main" class="footer__top-button"
+          ><img src="./assets/img/top-button.svg" alt=""
+        /></a>
+        <div class="footer__bottom">
+          <div class="footer__bottom-text __container">
+            Ähli hukuklar goralan © 2022 - Türkmen döwlet ykdysadyýet we
+            dolandyryş instituty
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="./assets/js/vue.js"></script>
     <script src="./assets/js/swiper-bundle.min.js"></script>
