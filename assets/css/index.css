@@ -855,7 +855,7 @@ body._lock {
   justify-content: space-between;
 }
 .information__left {
-  width: 49%;
+  width: 55%;
   display: flex;
   background-color: #fff;
   padding: 10px;
@@ -900,7 +900,7 @@ body._lock {
   border-bottom: 1px solid green;
 }
 .information__right {
-  width: 49%;
+  width: 44%;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -1337,6 +1337,7 @@ body._lock {
 
 .news-by-category {
   width: 100%;
+  cursor: pointer;
 }
 
 .news-by-category__category-name {
