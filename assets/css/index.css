@@ -1775,7 +1775,9 @@ body._lock {
   justify-content: center;
   float: left;
   margin-bottom: auto;
-  border-radius: 25%;
+}
+.contact-jpg img {
+  border-radius: 5%;
 }
 
 input[type="text"],
@@ -1829,6 +1831,7 @@ input[type="submit"]:hover {
 .left__btn {
   display: flex;
   justify-content: flex-end;
+  padding-right: 45px;
 }
 .left__btn a {
   padding: 6px;
@@ -1841,21 +1844,9 @@ input[type="submit"]:hover {
   text-transform: capitalize;
   border-radius: 4px;
 }
-.left__button {
+.left__button a {
   margin-bottom: 34px;
   border-radius: 4px;
-}
-.left__button button:hover {
-  background-color: rgba(196, 225, 241, 0.8);
-  cursor: pointer;
-  transition: 0.3s;
-}
-.left__button button.active {
-  color: #ffffff;
-  background: green;
-}
-.left__button button:not(:last-child) {
-  margin-right: 30px;
 }
 .left__row {
   display: flex;
@@ -1863,11 +1854,24 @@ input[type="submit"]:hover {
 }
 .left__img {
   margin-right: 20px;
+  width: 900px;
+  height: 200px;
+}
+.left__img img {
+  width: 100%;
+  height: 100%;
 }
 .left__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left__text:hover {
+  background-color: #fff;
+  cursor: pointer;
 }
 .left__title {
   font-weight: 600;
@@ -1927,6 +1931,18 @@ input[type="submit"]:hover {
 .makalar__box {
   width: 100%;
   height: 100%;
+}
+.makalar__img {
+  padding: 20px;
+  background-color: #fbfbfb;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.makalar__img img {
+  width: 50%;
+  height: 30%;
 }
 .makalar__content {
   padding: 20px;
