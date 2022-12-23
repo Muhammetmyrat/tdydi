@@ -25,6 +25,12 @@ createApp({
         { title: "Resminamalar" },
         { title: "Soraglar we jogaplar" },
       ],
+      articles: [
+        { id: 1, title: "Makalalar", path: "./articles-books.html" },
+        { id: 2, title: "Kitaplar", path: "./books.html" },
+        { id: 2, title: "Video", path: "./videos.html" },
+        { id: 2, title: "Suratlar" },
+      ],
       observer: null,
       isActive: false,
       paginationClasses: {
@@ -71,7 +77,6 @@ createApp({
           });
         }
       }
-      console.log(output);
       return output;
     },
 

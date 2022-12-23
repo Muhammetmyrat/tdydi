@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TDYDI | Habarlaşmak</title>
+    <title>TDYDI | Video</title>
     <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
@@ -244,59 +244,76 @@
 			  </div>
 			</div>
 		 </header>
- 
-      <div class="contact-main">
-        <div class="contact-jpg">
-            <img src="./assets/img/contactus.jpg" alt="" height="500" width="500">
-           </div>
-      <div class="contact">
-        <form action="#">
-            <label for="fname">Ady</label>
-            <input type="text" id="fname" name="firstname" placeholder="Ady">
-        
-            <label for="lname">Familiyasy</label>
-            <input type="text" id="lname" name="lastname" placeholder="Familiyasy">
-
-            <label for="country">Salgysy</label>
-            <input type="text" id="lname" name="lastname" placeholder="Asgabat sah.">
- 
-        
-            <label for="subject">Bildiriş</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-        
-            <input type="submit" value="Ugrat">
-        
-          </form>
-      </div>
+      <main>
+			<div :class="['box__video video']">
+				<div class="video__pop">
+				  <div class="video__pop-container __container">
+					 <div class="video__pop-icon">
+						<img src="@/assets/img/icons/close.svg" alt="" />
+					 </div>
+					 <div class="video__pop-video">
+						<!-- <vue-plyr ref="plyr">
+						  <video :src="`${imgURL}${videoPath}`" type="video/mp4"></video>
+						</vue-plyr> -->
+					 </div>
+				  </div>
+				</div>
+				<div class="video__row">
+				  <div
+					 class="video__column"
+				  >
+					 <div class="video__box">
+						<div class="video__img">
+						  <!-- <img
+							 :src="`${imgURL}${
+								video?.fileDTOS?.filter(
+								  (data) => data?.extension === 'image'
+								)[0]?.path
+							 }`"
+							 alt=""
+						  /> -->
+						</div>
+						<div class="video__play">
+						  <img src="./assets/img/icons/play.svg" alt="" />
+						</div>
+					 </div>
+					 <div class="video__title">
+						wsdwedewdwe
+					 </div>
+				  </div>
+				</div>
+			 </div>
+      </main>
+      <footer class="footer">
+        <!-- <a href="#main" class="footer__top-button"
+          ><img src="./assets/img/top-button.svg" alt=""
+        /></a> -->
+        <div class="footer-infos">
+          <div class="footer-top__infos">
+            <span class="footer-top_info">
+              <img src="./assets/img/place.svg" />
+              Salgysy: 744000, Türkmenistan Aşgabat, 1972 (Atatürk) köçesi,
+              73</span
+            >
+            <span class="footer-top_info">
+              <img src="./assets/img/call.svg" /> Telefon: (+993 12)
+              48-62-31</span
+            ><span class="footer-top_info">Faks: (+993 12) 48-62-04</span
+            ><span class="footer-top_info">
+              <img src="./assets/img/email.svg" /> Email: tsiem@online.tm</span
+            >
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom-text __container">
+            Ähli hukuklar goralan © 2022 - Türkmen döwlet ykdysadyýet we
+            dolandyryş instituty
+          </div>
+        </div>
+      </footer>
     </div>
-   </main>
-	<footer class="footer">
-		<div class="footer-infos">
-		  <div class="footer-top__infos">
-			 <span class="footer-top_info">
-				<img src="./assets/img/place.svg" />
-				Salgysy: 744000, Türkmenistan Aşgabat, 1972 (Atatürk) köçesi,
-				73</span
-			 >
-			 <span class="footer-top_info">
-				<img src="./assets/img/call.svg" /> Telefon: (+993 12)
-				48-62-31</span
-			 ><span class="footer-top_info">Faks: (+993 12) 48-62-04</span
-			 ><span class="footer-top_info">
-				<img src="./assets/img/email.svg" /> Email: tsiem@online.tm</span
-			 >
-		  </div>
-		</div>
-		<div class="footer__bottom">
-		  <div class="footer__bottom-text __container">
-			 Ähli hukuklar goralan © 2022 - Türkmen döwlet ykdysadyýet we
-			 dolandyryş instituty
-		  </div>
-		</div>
-	 </footer>
- </div>
- <script src="./assets/js/vue.js"></script>
- <script src="./assets/js/swiper-bundle.min.js"></script>
- <script src="./assets/js/index.js"></script>
-</body>
+    <script src="./assets/js/vue.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
 </html>
