@@ -6,349 +6,377 @@
     <title>TDYDI | Baş sahypa</title>
     <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <link rel="stylesheet"  href="./assets/css/about.css" />
+    <link rel="stylesheet" href="./assets/css/about.css" />
   </head>
   <body>
     <div id="app">
       <header>
-        <div class="header">
-          <div class="header-top">
-            <div class="header-top__langs">
-              <div class="header-top__lang">
-                <div class="header-top__lang-img">
-                  <img src="./assets/img/Flag_of_Turkmenistan.png" alt="" />
+			<div class="header">
+			  <div class="header-top">
+				 <div class="header-top__langs">
+					<div class="header-top__lang">
+					  <div class="header-top__lang-img">
+						 <img src="./assets/img/Flag_of_Turkmenistan.png" alt="" />
+					  </div>
+					  <div class="header-top__lang-text">TK</div>
+					</div>
+					<div class="header-top__lang">
+					  <div class="header-top__lang-img">
+						 <img src="./assets/img/Flag_of_Russia.png" alt="" />
+					  </div>
+					  <div class="header-top__lang-text">RU</div>
+					</div>
+					<div class="header-top__lang">
+					  <div class="header-top__lang-img">
+						 <img
+							src="./assets/img/istockphoto-486407806-612x612.jpg"
+							alt=""
+						 />
+					  </div>
+					  <div class="header-top__lang-text">EN</div>
+					</div>
+				 </div>
+			  </div>
+			  <div class="header-middle">
+				 <div class="header-middle__left">
+					<div class="header-middle__logo">
+					  <img src="./assets/img/logo.gif" alt="" />
+					</div>
+					<div class="header-middle__titles">
+					  <div class="header-middle__menus">
+						 <div class="header-middle__menu">
+							<span><a href="./index.html">Baş sahypa</a></span>
+						 </div>
+						 <div class="header-middle__menu">
+							<span><a href="./about.html">Biz barada</a></span>
+						 </div>
+						 <div class="header-middle__menu">
+							<span><a href="./contact.html">Habarlaşmak </a></span>
+						 </div>
+					  </div>
+					  <div class="header-middle__title">
+						 <span>
+							Türkmen döwlet ykdysadyýet we dolandyryş instituty
+						 </span>
+					  </div>
+					</div>
+				 </div>
+				 <div class="header-middle__right">
+					<input type="text" placeholder="Gözleg" />
+				 </div>
+			  </div>
+			  <div class="header-bottom">
+				 <div class="menu__body">
+					<div class="menu__wrapper">
+					  <ul class="menu__list">
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Institut barada</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							 <a class="__icon-arrow-down">Makalalar we maglumatlar</a>
+							 <ul class="menu__item-sub-menu">
+								<li
+								  class="menu__item-sub-item"
+								  v-for="(item) in articles"
+								  :key="item.id"
+								>
+								  <a
+									 :href="item.path"
+									 style="display: block; text-align: left; width: 253px;"
+									 class="menu__item-sub-link"
+									 >{{item.title}}</a
+								  >
+								</li>
+							 </ul>
+						  </li>
+						 <!-- <li class="menu__item">
+							<a class="__icon-arrow-down">Dalaşgärler</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Talyplar</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Magistirlar</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Aspirantlar</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Işgärler</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Uçurumlar</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Online sapaklar</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li>
+							</ul>
+						 </li>
+						 <li class="menu__item">
+							<a class="__icon-arrow-down">Özüňi syna</a>
+							<ul class="menu__item-sub-menu">
+							  <li
+								 class="menu__item-sub-item"
+								 v-for="(item, index) in items"
+								 :key="index"
+							  >
+								 <a
+									href="#"
+									style="display: block; text-align: left"
+									class="menu__item-sub-link"
+									>{{item.title}}</a
+								 >
+							  </li> -->
+							</ul>
+						 </li>
+					  </ul>
+					</div>
+				 </div>
+			  </div>
+			</div>
+		 </header>
+
+      <div class="container">
+        <div class="sheet">
+          <div class="about-page">
+            <span> INSTITUTYŇ GURLUŞY </span>
+            <p>
+              Türkmenistanyň Prezidentiniň Türkmenistanyň ýokary okuw
+              mekdepleriniň gurluşyny tassyklamak hakynda 2019-njy ýylyň 12-nji
+              iýunyndaky 1264 belgili karary esasynda Türkmen döwlet ykdysadyýet
+              we dolandyryş institutynyň täze gurluşy tassyklandy. Institutyň
+              gurluşy:
+            </p>
+            <br /><br />
+            <span>FAKULTETLER</span>
+            <div class="cards">
+              <div class="card">
+                <img
+                  src="./assets/img/TDYDI-bina.jpg"
+                  alt="Avatar"
+                  width="400"
+                />
+                <div class="card-container">
+                  <h4>Ykdysadyýet</h4>
+                  <p>fakulteti</p>
                 </div>
-                <div class="header-top__lang-text">TK</div>
               </div>
-              <div class="header-top__lang">
-                <div class="header-top__lang-img">
-                  <img src="./assets/img/Flag_of_Russia.png" alt="" />
+              <div class="card">
+                <img
+                  src="./assets/img/TDYDI-bina.jpg"
+                  alt="Avatar"
+                  width="400"
+                />
+                <div class="card-container">
+                  <h4>Maliýe</h4>
+                  <p>fakulteti</p>
                 </div>
-                <div class="header-top__lang-text">RU</div>
               </div>
-              <div class="header-top__lang">
-                <div class="header-top__lang-img">
-                  <img
-                    src="./assets/img/istockphoto-486407806-612x612.jpg"
-                    alt=""
-                  />
+              <div class="card">
+                <img
+                  src="./assets/img/TDYDI-bina.jpg"
+                  alt="Avatar"
+                  width="400"
+                />
+                <div class="card-container">
+                  <h4>Menejment</h4>
+                  <p>fakulteti</p>
                 </div>
-                <div class="header-top__lang-text">EN</div>
+              </div>
+              <div class="card">
+                <img
+                  src="./assets/img/TDYDI-bina.jpg"
+                  alt="Avatar"
+                  width="400"
+                />
+                <div class="card-container">
+                  <h4>Marketing</h4>
+                  <p>fakulteti</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="header-middle">
-            <div class="header-middle__left">
-              <div class="header-middle__logo">
-                <img src="./assets/img/logo.gif" alt="" />
-              </div>
-              <div class="header-middle__titles">
-                <div class="header-middle__menus">
-                  <div class="header-middle__menu">
-                    <span><a href="./index.html">Baş sahypa</a></span>
-                  </div>
-                  <div class="header-middle__menu">
-                    <span><a href="./about.html">Biz barada</a></span>
-                  </div>
-                  <div class="header-middle__menu">
-                    <span><a href="./contact.html">Habarlaşmak </a></span>
-                  </div>
-                  <div class="header-middle__menu">
-                    <span><a href="#">Çäreler</a></span>
-                  </div>
-                </div>
-                <div class="header-middle__title">
-                  <span>
-                    Türkmen döwlet ykdysadyýet we dolandyryş instituty
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="header-middle__right">
-              <input type="text" placeholder="Gözleg" />
-            </div>
-          </div>
-          <div class="header-bottom">
-            <div class="menu__body">
-              <div class="menu__wrapper">
-                <ul class="menu__list">
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Institut barada</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Dalaşgärler</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Talyplar</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Magistirlar</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Aspirantlar</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Işgärler</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Uçurumlar</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Online sapaklar</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="menu__item">
-                    <a class="__icon-arrow-down">Özüňi syna</a>
-                    <ul class="menu__item-sub-menu">
-                      <li
-                        class="menu__item-sub-item"
-                        v-for="(item, index) in items"
-                        :key="index"
-                      >
-                        <a
-                          href="#"
-                          style="display: block; text-align: left"
-                          class="menu__item-sub-link"
-                          >{{item.title}}</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+
+          <div class="">
+            <div class="list-kafedra">
+              <article>
+                <dt>Kafedralar:</dt>
+                <dl>
+                  <dt>1</dt>
+                  <dd>Buhgalterçilik hasaba alnyşy we audit kafedrasy</dd>
+                  <dt>2</dt>
+                  <dd>Statistika kafedrasy</dd>
+                  <dt>3</dt>
+                  <dd>Ykdysadyýet we hukuk kafedrasy</dd>
+                  <dt>4</dt>
+                  <dd>Ykdysady nazaryýet kafedrasy</dd>
+                  <dt>5</dt>
+                  <dd>Malie kafedrasy</dd>
+                  <dt>6</dt>
+                  <dd>Bank işi kafedrasy</dd>
+                  <dt>7</dt>
+                  <dd>Jemgyýeti öwreniş ylymlary kafedrasy</dd>
+                  <dt>8</dt>
+                  <dd>Sanly ykdysadyýet kafedrasy</dd>
+                  <dt>9</dt>
+                  <dd>Menejment kafedrasy</dd>
+                  <dt>10</dt>
+                  <dd>Dünýä ykdysadyýeti kafedrasy</dd>
+                  <dt>11</dt>
+                  <dd>Maglumat ulgamlary kafedrasy</dd>
+                  <dt>12</dt>
+                  <dd>Daşary ýurt dilleri kafedrasy</dd>
+                  <dt>13</dt>
+                  <dd>Marketing kafedrasy</dd>
+                  <dt>14</dt>
+                  <dd>Zähmetiň ykdysadyýeti kafedrasy</dd>
+                  <dt>15</dt>
+                  <dd>Ýokary matematika we informatika kafedrasy</dd>
+                  <dt>16</dt>
+                  <dd>Bedenterbiýe kafedrasy</dd>
+                </dl>
+              </article>
             </div>
           </div>
         </div>
-      </header>
-
-       <div class="container">
-        <div class="sheet">   
-         <div class="about-page">       
-            <span > INSTITUTYŇ GURLUŞY </span>
-            <p> Türkmenistanyň Prezidentiniň Türkmenistanyň ýokary okuw mekdepleriniň gurluşyny tassyklamak hakynda 2019-njy ýylyň 12-nji iýunyndaky 1264 belgili karary esasynda Türkmen döwlet ykdysadyýet we dolandyryş institutynyň täze gurluşy tassyklandy.
-
-                Institutyň gurluşy:</p>
-                <br><br>
-                <span>FAKULTETLER</span>
-                <div class="cards">
-                     <div class="card">
-                    <img src="./assets/img/TDYDI-bina.jpg" alt="Avatar" width="400">
-                    <div class="card-container">
-                      <h4>Ykdysadyýet</h4>
-                      <p>fakulteti</p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img src="./assets/img/TDYDI-bina.jpg" alt="Avatar" width="400">
-                    <div class="card-container">
-                      <h4>Maliýe</h4>
-                      <p>fakulteti</p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img src="./assets/img/TDYDI-bina.jpg" alt="Avatar" width="400">
-                    <div class="card-container">
-                      <h4>Menejment</h4>
-                      <p>fakulteti</p>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <img src="./assets/img/TDYDI-bina.jpg" alt="Avatar" width="400">
-                    <div class="card-container">
-                      <h4>Marketing</h4>
-                      <p>fakulteti</p>
-                    </div>
-                  </div>
-                </div>
-         </div>
-
-<div class="">
-<div class="list-kafedra">
-    <article>
-        <dt>Kafedralar: </dt>
-        <dl>
-            <dt>1</dt>
-            <dd>Buhgalterçilik hasaba alnyşy we audit kafedrasy</dd>
-            <dt>2</dt>
-            <dd>Statistika kafedrasy</dd>
-            <dt>3</dt>
-            <dd> Ykdysadyýet we hukuk kafedrasy </dd>
-            <dt>4</dt>
-            <dd>Ykdysady nazaryýet kafedrasy</dd>
-            <dt>5</dt>
-            <dd>Malie kafedrasy</dd>
-            <dt>6</dt>
-            <dd>Bank işi kafedrasy</dd>
-            <dt>7</dt>
-            <dd>Jemgyýeti öwreniş ylymlary kafedrasy</dd>
-            <dt>8</dt>
-            <dd>Sanly ykdysadyýet kafedrasy</dd>
-            <dt>9</dt>
-            <dd>Menejment kafedrasy</dd>
-            <dt>10</dt>
-            <dd>Dünýä ykdysadyýeti kafedrasy</dd>
-            <dt>11</dt>
-            <dd>Maglumat ulgamlary kafedrasy</dd>
-            <dt>12</dt>
-            <dd>Daşary ýurt dilleri kafedrasy</dd>
-            <dt>13</dt>
-            <dd>Marketing kafedrasy</dd>
-            <dt>14</dt>
-            <dd>Zähmetiň ykdysadyýeti kafedrasy</dd>
-            <dt>15</dt>
-            <dd>Ýokary matematika we informatika kafedrasy</dd>
-            <dt>16</dt>
-            <dd>Bedenterbiýe kafedrasy</dd>
-
-        </dl>
-    </article>
-</div>
-</div>
-
-
-   </div>
- </div>
-
-
-
-      <footer class="footer">
-        <a href="#main" class="footer__top-button"
-          ><img src="./assets/img/top-button.svg" alt=""
-        /></a>
-        <div class="footer-infos">
-          <div class="footer-top__infos">
-            <span class="footer-top_info">
-              <img src="./assets/img/place.svg" />
-              Salgysy: 744000, Türkmenistan Aşgabat, 1972 (Atatürk) köçesi,
-              73</span
-            >
-            <span class="footer-top_info">
-              <img src="./assets/img/call.svg" /> Telefon: (+993 12)
-              48-62-31</span
-            ><span class="footer-top_info">Faks: (+993 12) 48-62-04</span
-            ><span class="footer-top_info">
-              <img src="./assets/img/email.svg" /> Email: tsiem@online.tm</span
-            >
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <div class="footer__bottom-text __container">
-            Ähli hukuklar goralan © 2022 - Türkmen döwlet ykdysadyýet we
-            dolandyryş instituty
-          </div>
-        </div>
-      </footer>
+      </div>
+		<footer class="footer">
+			<!-- <a href="#main" class="footer__top-button"
+			  ><img src="./assets/img/top-button.svg" alt=""
+			/></a> -->
+			<div class="footer-infos">
+			  <div class="footer-top__infos">
+				 <span class="footer-top_info">
+					<img src="./assets/img/place.svg" />
+					Salgysy: 744000, Türkmenistan Aşgabat, 1972 (Atatürk) köçesi,
+					73</span
+				 >
+				 <span class="footer-top_info">
+					<img src="./assets/img/call.svg" /> Telefon: (+993 12)
+					48-62-31</span
+				 ><span class="footer-top_info">Faks: (+993 12) 48-62-04</span
+				 ><span class="footer-top_info">
+					<img src="./assets/img/email.svg" /> Email: tsiem@online.tm</span
+				 >
+			  </div>
+			</div>
+			<div class="footer__bottom">
+			  <div class="footer__bottom-text __container">
+				 Ähli hukuklar goralan © 2022 - Türkmen döwlet ykdysadyýet we
+				 dolandyryş instituty
+			  </div>
+			</div>
+		 </footer>
     </div>
     <script src="./assets/js/vue.js"></script>
     <script src="./assets/js/swiper-bundle.min.js"></script>

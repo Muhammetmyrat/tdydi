@@ -6,10 +6,11 @@
     <title>TDYDI | Video</title>
     <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
     <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/css/videos.css" />
   </head>
   <body>
     <div id="app">
-      <header>
+		<header>
 			<div class="header">
 			  <div class="header-top">
 				 <div class="header-top__langs">
@@ -47,7 +48,7 @@
 							<span><a href="./index.html">Baş sahypa</a></span>
 						 </div>
 						 <div class="header-middle__menu">
-							<span><a href="#">Biz barada</a></span>
+							<span><a href="./about.html">Biz barada</a></span>
 						 </div>
 						 <div class="header-middle__menu">
 							<span><a href="./contact.html">Habarlaşmak </a></span>
@@ -245,40 +246,190 @@
 			</div>
 		 </header>
       <main>
-			<div :class="['box__video video']">
+			<div :class="['box__video video __container', { active: isVideo === true }]">
 				<div class="video__pop">
 				  <div class="video__pop-container __container">
-					 <div class="video__pop-icon">
-						<img src="@/assets/img/icons/close.svg" alt="" />
+					 <div class="video__pop-icon" @click="showVideoPoUp">
+						<img src="./assets/img/close.svg" alt="" />
 					 </div>
 					 <div class="video__pop-video">
-						<!-- <vue-plyr ref="plyr">
-						  <video :src="`${imgURL}${videoPath}`" type="video/mp4"></video>
-						</vue-plyr> -->
+						<video controls>
+							<source src="./assets/videos/Build Node.js User Authentication - Password Login.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						 </video>
 					 </div>
 				  </div>
 				</div>
 				<div class="video__row">
 				  <div
 					 class="video__column"
+					 @click="showVideoPoUp"
 				  >
 					 <div class="video__box">
 						<div class="video__img">
-						  <!-- <img
-							 :src="`${imgURL}${
-								video?.fileDTOS?.filter(
-								  (data) => data?.extension === 'image'
-								)[0]?.path
-							 }`"
+						  <img
+							 src="./assets/img/book.jpeg"
 							 alt=""
-						  /> -->
+						  />
 						</div>
 						<div class="video__play">
-						  <img src="./assets/img/icons/play.svg" alt="" />
+						  <img src="./assets/img/play.svg" alt="" />
 						</div>
 					 </div>
 					 <div class="video__title">
-						wsdwedewdwe
+						Ylmy çäreleri
+					 </div>
+				  </div>
+				  <div
+					 class="video__column"
+					 @click="showVideoPoUp"
+				  >
+					 <div class="video__box">
+						<div class="video__img">
+						  <img
+							 src="./assets/img/book.jpeg"
+							 alt=""
+						  />
+						</div>
+						<div class="video__play">
+						  <img src="./assets/img/play.svg" alt="" />
+						</div>
+					 </div>
+					 <div class="video__title">
+						Ylmy çäreleri
+					 </div>
+				  </div>
+				  <div
+					 class="video__column"
+					 @click="showVideoPoUp"
+				  >
+					 <div class="video__box">
+						<div class="video__img">
+						  <img
+							 src="./assets/img/book.jpeg"
+							 alt=""
+						  />
+						</div>
+						<div class="video__play">
+						  <img src="./assets/img/play.svg" alt="" />
+						</div>
+					 </div>
+					 <div class="video__title">
+						Ylmy çäreleri
+					 </div>
+				  </div>
+				  <div
+					 class="video__column"
+					 @click="showVideoPoUp"
+				  >
+					 <div class="video__box">
+						<div class="video__img">
+						  <img
+							 src="./assets/img/book.jpeg"
+							 alt=""
+						  />
+						</div>
+						<div class="video__play">
+						  <img src="./assets/img/play.svg" alt="" />
+						</div>
+					 </div>
+					 <div class="video__title">
+						Ylmy çäreleri
+					 </div>
+				  </div>
+				  <div
+					 class="video__column"
+					 @click="showVideoPoUp"
+				  >
+					 <div class="video__box">
+						<div class="video__img">
+						  <img
+							 src="./assets/img/book.jpeg"
+							 alt=""
+						  />
+						</div>
+						<div class="video__play">
+						  <img src="./assets/img/play.svg" alt="" />
+						</div>
+					 </div>
+					 <div class="video__title">
+						Ylmy çäreleri
+					 </div>
+				  </div>
+				  <div
+					 class="video__column"
+					 @click="showVideoPoUp"
+				  >
+					 <div class="video__box">
+						<div class="video__img">
+						  <img
+							 src="./assets/img/book.jpeg"
+							 alt=""
+						  />
+						</div>
+						<div class="video__play">
+						  <img src="./assets/img/play.svg" alt="" />
+						</div>
+					 </div>
+					 <div class="video__title">
+						Ylmy çäreleri
+					 </div>
+				  </div>
+				  <div
+					 class="video__column"
+					 @click="showVideoPoUp"
+				  >
+					 <div class="video__box">
+						<div class="video__img">
+						  <img
+							 src="./assets/img/book.jpeg"
+							 alt=""
+						  />
+						</div>
+						<div class="video__play">
+						  <img src="./assets/img/play.svg" alt="" />
+						</div>
+					 </div>
+					 <div class="video__title">
+						Ylmy çäreleri
+					 </div>
+				  </div>
+				  <div
+					 class="video__column"
+					 @click="showVideoPoUp"
+				  >
+					 <div class="video__box">
+						<div class="video__img">
+						  <img
+							 src="./assets/img/book.jpeg"
+							 alt=""
+						  />
+						</div>
+						<div class="video__play">
+						  <img src="./assets/img/play.svg" alt="" />
+						</div>
+					 </div>
+					 <div class="video__title">
+						Ylmy çäreleri
+					 </div>
+				  </div>
+				  <div
+					 class="video__column"
+					 @click="showVideoPoUp"
+				  >
+					 <div class="video__box">
+						<div class="video__img">
+						  <img
+							 src="./assets/img/book.jpeg"
+							 alt=""
+						  />
+						</div>
+						<div class="video__play">
+						  <img src="./assets/img/play.svg" alt="" />
+						</div>
+					 </div>
+					 <div class="video__title">
+						Ylmy çäreleri
 					 </div>
 				  </div>
 				</div>

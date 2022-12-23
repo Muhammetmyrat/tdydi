@@ -33,6 +33,7 @@ createApp({
       ],
       observer: null,
       isActive: false,
+      isVideo: false,
       paginationClasses: {
         ...defaultClasses,
       },
@@ -224,6 +225,9 @@ createApp({
       } else {
         document.body.classList.remove("_lock");
       }
+    },
+    showVideoPoUp() {
+      this.isVideo = !this.isVideo;
     },
   },
 }).mount("#app");
